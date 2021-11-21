@@ -1,0 +1,9 @@
+SELECT CUSTOMERS.cname, MOVIES.mname, rentals.rid
+FROM customers JOIN rentals USING (cid)
+JOIN movies USING (mid) LIMIT 10;
+
+-- SUBQUERIES (YES IT CAN)
+
+SELECT (SELECT CUSTOMERS.CNAME FROM customers WHERE CUSTOMERS.cid = RENTALS.cid),
+(SELECT MOVIES.mname FROM movies WHERE MOVIES.MID = RENTALS.mid), RENTALS.rid
+FROM rentals LIMIT 10;

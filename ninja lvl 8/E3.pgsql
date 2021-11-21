@@ -1,0 +1,1 @@
+SELECT pfirstname, (pfavorites -> 'Desserts') ? 'ice cream' AS "Likes Ice Cream" FROM people WHERE (pfavorites -> 'Desserts') ? 'ice cream'; 

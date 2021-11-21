@@ -1,0 +1,1 @@
+SELECT dept, ename FROM employees RIGHT JOIN department USING (eid);
